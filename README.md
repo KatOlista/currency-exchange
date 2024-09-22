@@ -2,11 +2,13 @@
 
 Currency Converter is a simple web application that allows you to convert currency at the NBU rate.
 
+
 ## Features:
 
 - There are placed USD/UAH and EUR/UAH rates in Header;
 - It is possible to change amoun in every input field. The calculation result will be shown in the another input field;
 - If currency is changed value is recalculated;
+
 
 ## Technologies used:
 
