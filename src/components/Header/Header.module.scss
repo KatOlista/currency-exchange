@@ -2,6 +2,7 @@
   padding-block: 25px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__logo {
     will-change: filter;
@@ -9,6 +10,10 @@
     &:hover {
       filter: drop-shadow(0 0 2em #646cffaa);
     }
+  }
+
+  &__loader {
+    width: 50px;
   }
 }
 

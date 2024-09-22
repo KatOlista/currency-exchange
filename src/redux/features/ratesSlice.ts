@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  ratesLoaded: false,
-  ratesHasError: false,
-  currentRates: {},
+  isLoading: false,
+  hasError: false,
+  rates: [],
 };
 
 export const ratesSlice = createSlice({
@@ -11,13 +11,13 @@ export const ratesSlice = createSlice({
   initialState,
   reducers: {
     setRatesLoading: (state, action) => {
-      state.ratesLoaded = action.payload;
+      state.isLoading = action.payload;
     },
     setRatesError: (state, action) => {
-      state.ratesHasError = action.payload;
+      state.hasError = action.payload;
     },
     setRates: (state, action) => {
-      state.currentRates = action.payload;
+      state.rates = action.payload;
     },
   },
 });

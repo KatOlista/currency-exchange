@@ -1,4 +1,7 @@
 .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   &__title {
     color: #81ffa7;

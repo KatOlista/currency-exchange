@@ -6,23 +6,26 @@ import { RateList, Loader } from '..';
 import styles from './Header.module.scss';
 
 export const Header = () => {
-  const { ratesLoaded, ratesHasError, currentRates } = useSelector(state => state.currentRates);
-  const { currenciesLoaded, currenciesHasError } = useSelector(state => state.currencies);
+  const { isLoading, hasError, rates } = useSelector(
+    (state) => state.currentRates,
+  );
 
-  const isLoading = ratesLoaded && currenciesLoaded;
-  const hasError = ratesHasError && currenciesHasError;
+  const showError = !isLoading && hasError;
+  const showContent = !isLoading && !hasError && !!rates.length;
 
   return (
     <header className={styles.header}>
       <Logo className={styles.header__logo} />
 
-      {isLoading && (<Loader />)}
-
-      {!isLoading && hasError && (<p>Something went wrong</p>)}
-
-      {!isLoading && !hasError && Object.keys(currentRates).length && (
-        <RateList rateObject={currentRates} />
+      {isLoading && (
+        <div className={styles.header__loader}>
+          <Loader />
+        </div>
       )}
+
+      {showError && <p>Something went wrong</p>}
+
+      {showContent && <RateList rates={rates} />}
     </header>
   );
 };

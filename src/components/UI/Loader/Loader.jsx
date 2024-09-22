@@ -1,6 +1,6 @@
 import styles from './Loader.module.scss';
 
-import LoaderIcon from '../../assets/icons/circles-loader.svg?react';
+import LoaderIcon from '../../../assets/icons/circles-loader.svg?react';
 
 export const Loader = () => {
   return (
