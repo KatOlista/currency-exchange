@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import {
-  convertCurrency,
-  DEFAULT_CURRENCIES,
-  getItem,
-} from '../../utils';
+import { convertCurrency, DEFAULT_CURRENCIES, getItem } from '../../utils';
 import { Loader, ConverterItem } from '../';
 import { setUpperInput } from '../../redux/features/upperInputSlice';
 import { setLowerInput } from '../../redux/features/lowerInputSlice';

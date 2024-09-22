@@ -19,15 +19,9 @@ export const ConverterItem = ({
 
   return (
     <div className={styles.item}>
-      <CurrencySelect
-        value={selectedCc}
-        onChange={changeSelectHandler}
-      />
+      <CurrencySelect value={selectedCc} onChange={changeSelectHandler} />
 
-      <CurrencyInput
-        value={inputValue}
-        onChange={changeInputValueHandler}
-      />
+      <CurrencyInput value={inputValue} onChange={changeInputValueHandler} />
     </div>
   );
 };

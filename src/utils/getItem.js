@@ -1,2 +1,1 @@
-export const getItem = (rates, query) =>
-  rates.find(({ cc }) => cc === query);
+export const getItem = (rates, query) => rates.find(({ cc }) => cc === query);
