@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux';
 
-import Logo from '../../assets/icons/currency-exchange.svg?react';
 import { RateList, Loader } from '..';
 
 import styles from './Header.module.scss';
+
+import Logo from '../../assets/icons/currency-exchange.svg?react';
 
 export const Header = () => {
   const { isLoading, hasError, rates } = useSelector(
@@ -15,7 +16,9 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Logo className={styles.header__logo} />
+      <a href='/'>
+        <Logo className={styles.header__logo} />
+      </a>
 
       {isLoading && (
         <div className={styles.header__loader}>

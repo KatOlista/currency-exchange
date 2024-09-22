@@ -1,4 +1,4 @@
-import { regexpNotNumber } from "./constants";
+import { regexpNotNumber } from './constants';
 
 export const validateInput = (value) => {
   let checkedValue = value.replace(regexpNotNumber, '');

@@ -8,22 +8,26 @@ export const ConverterItem = ({
   setInputValue,
   setInputOnCurrencyChange,
   selectedCc,
-  setSelectedCc,
 }) => {
   const changeInputValueHandler = (e) => {
     setInputValue(validateInput(e.target.value));
   };
 
   const changeSelectHandler = (e) => {
-    setSelectedCc(e.target.value);
-    setInputOnCurrencyChange();
+    setInputOnCurrencyChange(e.target.value);
   };
 
   return (
     <div className={styles.item}>
-      <CurrencySelect value={selectedCc} onChange={changeSelectHandler} />
+      <CurrencySelect
+        value={selectedCc}
+        onChange={changeSelectHandler}
+      />
 
-      <CurrencyInput value={inputValue} onChange={changeInputValueHandler} />
+      <CurrencyInput
+        value={inputValue}
+        onChange={changeInputValueHandler}
+      />
     </div>
   );
 };

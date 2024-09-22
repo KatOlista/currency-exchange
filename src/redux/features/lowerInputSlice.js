@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  lowerInputValue: '0',
+  lowerInputValue: 0,
 };
 
 export const lowerInputSlice = createSlice({

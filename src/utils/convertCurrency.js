@@ -5,19 +5,16 @@ const getRounded = (num) => {
 };
 
 export const convertCurrency = (amount, rate1, currency1, rate2, currency2) => {
-  if (
-    currency1 === DEFAULT_CURRENCIES.uah &&
-    currency2 === DEFAULT_CURRENCIES.uah
-  ) {
-    getRounded(amount);
+  if (currency1 === currency2) {
+    return amount;
   }
 
   if (currency1 === DEFAULT_CURRENCIES.uah) {
-    getRounded(amount / rate1);
+    return getRounded(amount / rate1);
   }
 
   if (currency2 === DEFAULT_CURRENCIES.uah) {
-    getRounded(amount * rate1);
+    return getRounded(amount * rate1);
   }
 
   return getRounded((amount * rate1) / rate2);

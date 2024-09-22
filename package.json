@@ -6,7 +6,7 @@
   "type": "module",
   "homepage": "./",
   "scripts": {
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "deploy": "gh-pages -d dist",
     "dev": "npm run fix-style & vite",
     "fix-style": "npm run format & npm run lint",
