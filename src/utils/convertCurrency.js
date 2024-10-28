@@ -10,7 +10,7 @@ export const convertCurrency = (amount, rate1, currency1, rate2, currency2) => {
   }
 
   if (currency1 === DEFAULT_CURRENCIES.uah) {
-    return getRounded(amount / rate1);
+    return getRounded(amount / rate2);
   }
 
   if (currency2 === DEFAULT_CURRENCIES.uah) {
